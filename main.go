@@ -3,13 +3,14 @@ package main
 import (
 	"net/http"
 
+	"eventBook.sample.com/db"
 	"eventBook.sample.com/models"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	server := gin.Default()
-
+	db.InitDB()
 	server.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Welcome to the Event Booking API")
 	})
