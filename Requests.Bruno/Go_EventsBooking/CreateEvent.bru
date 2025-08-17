@@ -1,0 +1,21 @@
+meta {
+  name: CreateEvent
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Tech Conference 2025",
+    "description": "A conference about the latest in technology.",
+    "location": "San Francisco, CA",
+    "dateTime": "2025-09-10T10:00:00Z",
+    "userID": 12345
+  }
+}
